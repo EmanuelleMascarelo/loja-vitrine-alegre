@@ -1,0 +1,256 @@
+.header-container {
+  background-color: #1e255e;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+}
+
+.header-conteudo {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Agrupador da Esquerda (Hambúrguer + Logo) */
+.header-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Estilos do Botão Hambúrguer */
+.header-btn-hamburguer {
+  display: none; /* Oculto por padrão em telas grandes */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header-btn-hamburguer span {
+  width: 100%;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.header-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.header-logo-badge {
+  background-color: #a3e635;
+  color: #1e255e;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 900;
+}
+
+/* Campo de busca */
+.header-busca {
+  position: relative;
+  flex: 1;
+  max-width: 480px;
+}
+
+.header-busca-icone {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.header-busca input {
+  width: 100%;
+  height: 40px;
+  padding: 0 16px 0 40px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+}
+
+/* Ações à direita */
+.header-acoes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-btn-entrar {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* --- DROPDOWN DO USUÁRIO LOGADO --- */
+.usuario-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.usuario-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.usuario-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.usuario-btn strong {
+  color: #a3e635;
+}
+
+.seta {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.seta.aberto {
+  transform: rotate(180deg);
+}
+
+/* Caixa Flutuante do Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 115%;
+  right: 0;
+  background-color: #1e255e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  min-width: 180px;
+  padding: 6px 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: background-color 0.2s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.dropdown-divisor {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 4px 0;
+}
+
+.btn-sair-dropdown {
+  color: #f87171;
+}
+
+.btn-sair-dropdown:hover {
+  background-color: rgba(248, 113, 113, 0.15);
+}
+
+/* Carrinho */
+.header-carrinho-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.2s;
+}
+
+.header-carrinho-link:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.header-badge {
+  background-color: #a3e635;
+  color: #1e255e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .header-container {
+    height: auto;
+    padding: 12px 16px;
+  }
+
+  .header-conteudo {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .header-btn-hamburguer {
+    display: flex;
+  }
+
+  .header-busca {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .header-btn-entrar {
+    display: none;
+  }
+
+  .usuario-btn {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}

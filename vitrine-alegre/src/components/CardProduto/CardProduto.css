@@ -1,0 +1,162 @@
+.card-produto {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Área cinza clara superior onde fica a imagem */
+.card-topo {
+  background-color: #f8fafc;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.card-selo-desconto {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #c2410c;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.card-imagem-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-imagem {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Bloco de informações inferior */
+.card-conteudo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-categoria {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.card-titulo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-titulo {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.card-estrelas {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.card-rating-texto {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.card-precos {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.card-preco-antigo {
+  display: block;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+
+.card-preco-final {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e255e;
+}
+
+.card-btn-adicionar {
+  width: 100%;
+  height: 40px;
+  background-color: #a3e635;
+  color: #1e255e;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.card-btn-adicionar:hover {
+  opacity: 0.9;
+}
+
+/* Badge de indicação no topo do card */
+.card-badge-no-carrinho {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #1e255e;
+  color: #a3e635;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+/* Estilo alternativo do botão quando já está no carrinho */
+.card-btn-adicionar.no-carrinho {
+  background-color: #1e255e;
+  color: #ffffff;
+}

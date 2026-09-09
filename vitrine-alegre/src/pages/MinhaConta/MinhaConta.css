@@ -1,0 +1,60 @@
+.conta-container {
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.conta-titulo {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.conta-card {
+  background-color: #1e255e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px;
+}
+
+.conta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.campo-grupo input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.btn-salvar-conta {
+  margin-top: 10px;
+  background-color: #a3e635;
+  color: #1e255e;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+
+.btn-salvar-conta:hover {
+  opacity: 0.9;
+}

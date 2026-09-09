@@ -1,0 +1,47 @@
+.vitrine-container {
+  width: 100%;
+  background-color: var(--cor-fundo, #F4F5FA);
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vitrine-conteudo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.vitrine-contador {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario, #687280);
+  margin-bottom: 16px;
+}
+
+.vitrine-carregando {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: var(--cor-texto-secundario, #687280);
+}
+
+.vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 640px) {
+  .vitrine-conteudo {
+    padding: 16px 12px;
+  }
+
+  .vitrine-grid {
+    grid-template-columns: 1fr; /* 1 Coluna única idêntica ao mockup mobile */
+    gap: 16px;
+  }
+}

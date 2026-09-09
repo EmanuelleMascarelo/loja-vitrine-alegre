@@ -1,0 +1,94 @@
+.pedidos-container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.pedidos-titulo {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.pedidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pedido-card {
+  background-color: #1e255e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  color: #ffffff;
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.pedido-codigo {
+  font-weight: bold;
+  margin-right: 12px;
+  color: #a3e635;
+}
+
+.pedido-data {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.pedido-badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.pedido-badge.sucesso {
+  background-color: rgba(163, 230, 53, 0.2);
+  color: #a3e635;
+}
+
+.pedido-badge.alerta {
+  background-color: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.pedido-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pedido-item-linha {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.pedido-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+  font-size: 1rem;
+}
+
+.btn-voltar {
+  display: inline-block;
+  margin-top: 16px;
+  background-color: #a3e635;
+  color: #1e255e;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
