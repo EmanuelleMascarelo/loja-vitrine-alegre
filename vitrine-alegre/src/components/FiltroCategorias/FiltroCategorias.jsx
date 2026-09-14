@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './FiltroCategorias.css';
 
 export default function FiltroCategorias({
@@ -7,33 +8,76 @@ export default function FiltroCategorias({
   ordenacao = '',
   aoMudarOrdenacao
 }) {
+  const [menuAberto, setMenuAberto] = useState(false);
+  const LIMITE_INICIAL = 7;
+
+  // As primeiras 7 ficam na barra principal
+  const categoriasPrincipais = categorias.slice(0, LIMITE_INICIAL);
+  // As restantes vão para o menu/tabela
+  const categoriasRestantes = categorias.slice(LIMITE_INICIAL);
+
+  const handleSelecionarEMeFechar = (nomeCat) => {
+    aoSelecionarCategoria(nomeCat);
+    setMenuAberto(false); // Fecha a tabelinha ao escolher uma categoria
+  };
+
   return (
     <div className="filtros-container">
       <div className="filtros-conteudo">
-        {/* Pílulas de Categorias */}
-        <div className="pilulas-wrapper">
+        {/* Pílulas de Categorias Principais */}
+        <div className="pilulas-wrapper" style={{ position: 'relative' }}>
           <button
             className={`pilula-item ${categoriaAtiva === '' ? 'ativa' : ''}`}
-            onClick={() => aoSelecionarCategoria('')}
+            onClick={() => handleSelecionarEMeFechar('')}
           >
             Todas
           </button>
 
-          {categorias.slice(0, 7).map((cat) => {
+          {categoriasPrincipais.map((cat) => {
             const nomeCategoria = typeof cat === 'object' ? cat.slug || cat.name : cat;
             return (
               <button
                 key={nomeCategoria}
                 className={`pilula-item ${categoriaAtiva === nomeCategoria ? 'ativa' : ''}`}
-                onClick={() => aoSelecionarCategoria(nomeCategoria)}
+                onClick={() => handleSelecionarEMeFechar(nomeCategoria)}
               >
                 {nomeCategoria}
               </button>
             );
           })}
 
-          {categorias.length > 7 && (
-            <span className="pilulas-mais">+{categorias.length - 7}</span>
+          {/* Botão +X que abre/fecha a tabelinha */}
+          {categoriasRestantes.length > 0 && (
+            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <button
+                type="button"
+                className="pilulas-mais"
+                onClick={() => setMenuAberto(!menuAberto)}
+                style={{ cursor: 'pointer' }}
+              >
+                {menuAberto ? 'Fechar ▲' : `+${categoriasRestantes.length} ▼`}
+              </button>
+
+              {/* Tabelinha / Dropdown de Categorias Restantes */}
+              {menuAberto && (
+                <div className="tabela-categorias-dropdown">
+                  <div className="tabela-categorias-grid">
+                    {categoriasRestantes.map((cat) => {
+                      const nomeCategoria = typeof cat === 'object' ? cat.slug || cat.name : cat;
+                      return (
+                        <button
+                          key={nomeCategoria}
+                          className={`item-tabela ${categoriaAtiva === nomeCategoria ? 'ativo' : ''}`}
+                          onClick={() => handleSelecionarEMeFechar(nomeCategoria)}
+                        >
+                          {nomeCategoria}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
           )}
         </div>
 
