@@ -22,4 +22,4 @@ Projeto desenvolvido para a disciplina de Desenvolvimento Front-End (IFES). A ap
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/EmanuelleMascarelo/loja-vitrine-alegre
+   https://github.com/EmanuelleMascarelo/loja-vitrine-alegre
