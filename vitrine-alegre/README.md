@@ -20,7 +20,7 @@ Projeto desenvolvido para a disciplina de Desenvolvimento Front-End (IFES). A ap
 
 ## 🛠️ Como Executar o Projeto Localmente
 
-1. **Clone o repositório:**
+1. **Os repositório:**
    ```bash
    https://github.com/EmanuelleMascarelo/loja-vitrine-alegre
    https://loja-vitrine-alegre.vercel.app/
