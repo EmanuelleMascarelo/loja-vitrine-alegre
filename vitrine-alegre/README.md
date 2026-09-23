@@ -23,3 +23,4 @@ Projeto desenvolvido para a disciplina de Desenvolvimento Front-End (IFES). A ap
 1. **Clone o repositório:**
    ```bash
    https://github.com/EmanuelleMascarelo/loja-vitrine-alegre
+   https://loja-vitrine-alegre.vercel.app/
